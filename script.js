@@ -62,13 +62,15 @@ function selectRate() {
   }
 }
 
-function enableSubmit() {
-  const submitBtn = document.querySelector('#submit-btn');
-  const agreement = document.querySelector('#agreement');
-  submitBtn.disabled = !agreement.checked;
-}
+checkbox.addEventListener("change", (event) => {
+  if (event .target.checked) {
+    submit.disabled = false;
+  } else {
+    submit.disabled = true;
+  }
+});
+
 window.onload = function () {
   selectHouse();
   selectRate();
-  enableSubmit();
 };

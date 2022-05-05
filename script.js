@@ -1,20 +1,21 @@
-const email = document.getElementsByName("email")
-const password = document.getElementsByName("password")
-const login = document.getElementById("login")
+const email = document.querySelector("#email")
+const password = document.querySelector("#password")
+const login = document.querySelector("#login")
 
 login.addEventListener("click", hello)
 
 function hello() {
-    let valorEmail = email.value
-    let valorSenha = password.value
-    if (valorEmail == "tryber@teste.com" && valorSenha == "123456") {
-        alert("Olá, Tryber!")
+    const valorEmail = email.value
+    const valorSenha = password.value
+    if (valorEmail === "tryber@teste.com" && valorSenha === "123456") {
+        alert("Olá, Tryber")
     } else {
-        alert("Email ou senha inválidos")
+        alert("Email ou senha incorretos")
     }
 }
+
 function selectHouse() {
-  const selectOptions = [
+const selectOptions = [
     { text: 'Gitnória', value: 'Gitnória', id: 'gitnoria-house', innerHTML: 'Gitnória' },
     { text: 'Reactpuff', value: 'Reactpuff', id: 'reactpuff-house', innerHTML: 'Reactpuff' },
     { text: 'Corvinode', value: 'Corvinode', id: 'corvinode-house', innerHTML: 'Corvinode' },

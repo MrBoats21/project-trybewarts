@@ -8,6 +8,6 @@ form {
     flex-direction: column;
 }
 
-.trybewarts-forms-logo {
+#trybewarts-forms-logo {
     height: 500px;
 }

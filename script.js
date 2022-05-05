@@ -1,18 +1,19 @@
-const email = document.getElementsByName("email")
-const password = document.getElementsByName("password")
-const login = document.getElementById("login")
+const email = document.getElementsByName('email');
+const password = document.getElementsByName('password');
+const login = document.getElementById('login');
 
-login.addEventListener("click", hello)
+login.addEventListener('click', hello);
 
 function hello() {
-    let valorEmail = email.value
-    let valorSenha = password.value
-    if (valorEmail == "tryber@teste.com" && valorSenha == "123456") {
-        alert("Olá, Tryber!")
-    } else {
-        alert("Email ou senha inválidos")
-    }
+  const valorEmail = email.value;
+  const valorSenha = password.value;
+  if (valorEmail == 'tryber@teste.com' || valorSenha == '123456') {
+    alert('Olá, Tryber!');
+  } else {
+    alert('Email ou senha inválidos');
+  }
 }
+
 function selectHouse() {
   const selectOptions = [
     { text: 'Gitnória', value: 'Gitnória', id: 'gitnoria-house', innerHTML: 'Gitnória' },
@@ -20,7 +21,6 @@ function selectHouse() {
     { text: 'Corvinode', value: 'Corvinode', id: 'corvinode-house', innerHTML: 'Corvinode' },
     { text: 'Pytherina', value: 'Pytherina', id: 'pytherina-house', innerHTML: 'Pytherina' },
   ];
-
   const select = document.getElementById('house');
   for (let index = 0; index < selectOptions.length; index += 1) {
     const option = document.createElement('option');

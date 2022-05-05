@@ -8,9 +8,9 @@ function hello() {
     const valorEmail = email.value
     const valorSenha = password.value
     if (valorEmail === "tryber@teste.com" && valorSenha === "123456") {
-        alert("Olá, Tryber")
+        alert("Olá, Tryber!")
     } else {
-        alert("Email ou senha incorretos")
+        alert("Email ou senha inválidos.")
     }
 }
 

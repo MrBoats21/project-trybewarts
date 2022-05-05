@@ -90,3 +90,28 @@ main {
   width: 400px;
   justify-content: space-between;
 }
+
+#label-family {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-content {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#rate-radio {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-rate {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}

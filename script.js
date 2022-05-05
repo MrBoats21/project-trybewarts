@@ -1,8 +1,8 @@
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const login = document.querySelector('#login');
-const checkbox = document.querySelector("#agreement")
-const submit = document.querySelector("#submit-btn")
+const checkbox = document.querySelector('#agreement');
+const submit = document.querySelector('#submit-btn');
 
 login.addEventListener('click', hello);
 
@@ -62,5 +62,13 @@ function selectRate() {
   }
 }
 
-window.onload = selectHouse();
-window.onload = selectRate();
+function enableSubmit() {
+  const submitBtn = document.querySelector('#submit-btn');
+  const agreement = document.querySelector('#agreement');
+  submitBtn.disabled = !agreement.checked;
+}
+window.onload = function () {
+  selectHouse();
+  selectRate();
+  enableSubmit();
+};

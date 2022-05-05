@@ -35,3 +35,11 @@
     margin-left: 20px;
     font-weight: bolder;
 }
+
+main {
+    display: flex;
+}
+
+#trybewarts-forms-logo {
+    height: 500px;
+}

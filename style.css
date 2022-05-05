@@ -13,8 +13,6 @@
     justify-content: space-around;
     align-items: center;
     color: white;
-
-
 }
 
 .trybewarts-header-logo {
@@ -44,6 +42,6 @@ main {
     height: 500px;
 }
 
-evaluation-form {
+#evaluation-form {
     display: flex;
 }

@@ -88,9 +88,17 @@
 
             </div>
 
-            <label for="comment">
-                <textarea name="comment" class="textarea" cols="30" rows="10" maxlength="500">Deixe seu comentário: </textarea>
-            </label>
+            <div class="form-container">
+                <label for="comment" class="textarea" >Deixe seu comentário:
+                    <textarea name="comment" cols="30" rows="10" maxlength="500"></textarea>
+                </label>
+                <label for="agreement" id="label-infos">
+                    <input type="checkbox" id="agreement" name="agreement">
+                    Você concorda com o uso das informações acima?
+                </label>
+            </div>
+
+            <button type="submit" id="submit-btn">Enviar</button>
         </form>
         <img src="images/trybewarts-colored.svg" alt="" id="trybewarts-forms-logo">
 

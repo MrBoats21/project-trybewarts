@@ -1,27 +1,26 @@
-const email = document.querySelector("#email")
-const password = document.querySelector("#password")
-const login = document.querySelector("#login")
+const email = document.querySelector('#email');
+const password = document.querySelector('#password');
+const login = document.querySelector('#login');
 
-login.addEventListener("click", hello)
+login.addEventListener('click', hello);
 
 function hello() {
-    const valorEmail = email.value
-    const valorSenha = password.value
-    if (valorEmail === "tryber@teste.com" && valorSenha === "123456") {
-        alert("Olá, Tryber!")
-    } else {
-        alert("Email ou senha inválidos.")
-    }
+  const valorEmail = email.value;
+  const valorSenha = password.value;
+  if (valorEmail === 'tryber@teste.com' && valorSenha === '123456') {
+    alert('Olá, Tryber!');
+  } else {
+    alert('Email ou senha inválidos.');
+  }
 }
 
 function selectHouse() {
-const selectOptions = [
+  const selectOptions = [
     { text: 'Gitnória', value: 'Gitnória', id: 'gitnoria-house', innerHTML: 'Gitnória' },
     { text: 'Reactpuff', value: 'Reactpuff', id: 'reactpuff-house', innerHTML: 'Reactpuff' },
     { text: 'Corvinode', value: 'Corvinode', id: 'corvinode-house', innerHTML: 'Corvinode' },
     { text: 'Pytherina', value: 'Pytherina', id: 'pytherina-house', innerHTML: 'Pytherina' },
   ];
-
   const select = document.getElementById('house');
   for (let index = 0; index < selectOptions.length; index += 1) {
     const option = document.createElement('option');
@@ -36,4 +35,30 @@ const selectOptions = [
   }
 }
 
+function selectRate() {
+  const arrayRate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const rateRadio = document.querySelector('#rate-radio');
+
+  for (let index = 0; index < arrayRate.length; index += 1) {
+    const divRate = document.createElement('div');
+    const inputRate = document.createElement('input');
+    inputRate.type = 'radio';
+    inputRate.name = 'rate';
+    inputRate.id = `ratio-${arrayRate[index]}`;
+    inputRate.value = arrayRate[index];
+
+    const label = document.createElement('label');
+    label.htmlFor = arrayRate[index];
+    label.innerHTML = arrayRate[index];
+
+    if (index === 0) {
+      inputRate.checked = true;
+    }
+    rateRadio.appendChild(divRate);
+    divRate.appendChild(inputRate);
+    divRate.appendChild(label);
+  }
+}
+
 window.onload = selectHouse();
+window.onload = selectRate();

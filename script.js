@@ -1,6 +1,8 @@
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const login = document.querySelector('#login');
+const checkbox = document.querySelector('#agreement');
+const submit = document.querySelector('#submit-btn');
 
 login.addEventListener('click', hello);
 
@@ -12,6 +14,10 @@ function hello() {
   } else {
     alert('Email ou senha inválidos.');
   }
+}
+
+if (checkbox.checked) {
+  submit.setAttribute('disabled');
 }
 
 function selectHouse() {
@@ -37,7 +43,7 @@ function selectHouse() {
 
 function selectRate() {
   const arrayRate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const rateRadio = document.querySelector('#rate-radio');
+  const rateRadio = document.querySelector('#rate-box');
 
   for (let index = 0; index < arrayRate.length; index += 1) {
     const divRate = document.createElement('div');
@@ -60,5 +66,13 @@ function selectRate() {
   }
 }
 
-window.onload = selectHouse();
-window.onload = selectRate();
+function enableSubmit() {
+  const submitBtn = document.querySelector('#submit-btn');
+  const agreement = document.querySelector('#agreement');
+  submitBtn.disabled = !agreement.checked;
+}
+window.onload = function () {
+  selectHouse();
+  selectRate();
+  enableSubmit();
+};

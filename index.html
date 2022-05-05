@@ -84,12 +84,25 @@
                 <br>
                 <div id="rate-radio">
                     <label for="" id="label-rate">Como você avalia a Trybewarts?</label>
+                    <div id="rate-box"></div>
                 </div>
 
             </div>
 
-            <label for="comment" class="textarea">Deixe seu comentário:
-                <textarea name="comment" id="comment" cols="50" rows="10" maxlength="500"></textarea required>
+            <div class="form-container">
+                <label for="comment" class="textarea">Deixe seu comentário:
+                    <textarea name="comment" cols="30" rows="10" maxlength="500"></textarea>
+                </label>
+                <label for="agreement" id="label-infos">
+                    <input type="checkbox" id="agreement" name="agreement">
+                    Você concorda com o uso das informações acima?
+                </label>
+
+                <button type="submit" id="submit-btn" disabled>Enviar</button>
+
+            </div>
+
+
         </form>
         <img src="images/trybewarts-colored.svg" alt="" id="trybewarts-forms-logo">
 

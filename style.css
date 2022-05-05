@@ -44,6 +44,10 @@
   font-weight: 900;
 }
 
+#login:hover {
+  background-color: darkslateblue;
+}
+
 main {
   display: flex;
 }
@@ -53,9 +57,8 @@ main {
 }
 
 #evaluation-form {
-  background-color: rgb(206, 206, 206);
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   width: 675px;
   padding: 20px;
 }
@@ -83,6 +86,7 @@ main {
 
 #rate-box {
   display: flex;
-  margin: 20px 0px;
+  margin: 20px 0%;
+  width: 400px;
   justify-content: space-between;
 }

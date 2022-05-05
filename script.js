@@ -16,10 +16,6 @@ function hello() {
   }
 }
 
-if (checkbox.checked) {
-    submit.setAttribute("disabled")
-}
-
 function selectHouse() {
   const selectOptions = [
     { text: 'Gitnória', value: 'Gitnória', id: 'gitnoria-house', innerHTML: 'Gitnória' },
